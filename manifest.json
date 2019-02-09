@@ -1,0 +1,29 @@
+{
+
+  "manifest_version": 2,
+  "name": "screen-cracker",
+  "version": "1.0",
+
+  "description": "Crack's Your Screen's Browser!",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "icons": {
+    "48": "icons/"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/",
+    "default_title": "screen-cracker",
+    "default_popup": "popup/crack_screen.html"
+  },
+
+  "web_accessible_resources": [
+    "img/",
+    "img/",
+    "img/"
+  ]
+
+}
