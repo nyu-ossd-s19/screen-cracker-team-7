@@ -14,7 +14,7 @@ Once the extension's icon appears in the Firefox toolbar, click the icon to crac
 Firefox
 
 ## Problems
-If you find a problem, please file a bug under issues.
+If you find a problem, please file a bug under [issues](https://github.com/nyu-ossd-s19/screen-cracker-team-7/issues).
 
 ## Contributing
 Please see our [contribution file](https://github.com/nyu-ossd-s19/screen-cracker-team-7/blob/master/CONTRIBUTING.md)
