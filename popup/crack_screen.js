@@ -8,7 +8,7 @@
 function listenForClicks() {
   document.addEventListener("click", (e) => {
     function getImageURL(beastName) {
-          return browser.extension.getURL("img/screen_crack_1.png");
+          return browser.extension.getURL("img/screen_crack_2.jpg");
     }
 
     /**
@@ -41,7 +41,7 @@ function listenForClicks() {
 
     /**
      * Get the active tab,
-     * then call "crack()" or "reset()" as appropriate.
+     * then call "crack_it()" or "reset()" as appropriate.
      */
     if (e.target.classList.contains("cracker")) {
       browser.tabs.query({active: true, currentWindow: true})
