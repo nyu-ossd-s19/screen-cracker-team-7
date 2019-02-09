@@ -11,7 +11,7 @@ Download the files from this repo, open "about:debugging" in Firefox, click "Loa
 Once the extension's icon appears in the Firefox toolbar, click the icon to crack your browser screen.
 
 ## Supported Browsers
-Firefox
+Firefox - [download here](https://www.mozilla.org/en-US/firefox/new/)
 
 ## Problems
 If you find a problem, please file a bug under [issues](https://github.com/nyu-ossd-s19/screen-cracker-team-7/issues).
