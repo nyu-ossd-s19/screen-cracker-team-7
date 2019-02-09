@@ -10,7 +10,6 @@ function listenForClicks() {
     function getImageURL(beastName) {
           return browser.extension.getURL("img/screen_crack_1.png");
     }
-  }
 
     /**
      * get the beast URL and send a "beastify" message to 
@@ -20,7 +19,7 @@ function listenForClicks() {
         let url = getImageURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
           command: "crack",
-          beastURL: url
+          crackURL: url
         });
     }
 
@@ -54,6 +53,7 @@ function listenForClicks() {
         .then(reset)
         .catch(reportError);
     }
+    });
 }
 
 /**
