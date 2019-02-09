@@ -17,4 +17,4 @@ Firefox
 If you find a problem, please file a bug under issues.
 
 ## Contributing
-Please see our contribution file
+Please see our [contribution file] (https://github.com/nyu-ossd-s19/screen-cracker-team-7/blob/master/CONTRIBUTING.md)
