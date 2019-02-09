@@ -7,11 +7,10 @@
  */
 function listenForClicks() {
   document.addEventListener("click", (e) => {
-
-    
     function getImageURL(beastName) {
-          return browser.extension.getURL("img/");
+          return browser.extension.getURL("img/screen_crack_1.png");
     }
+  }
 
     /**
      * get the beast URL and send a "beastify" message to 
@@ -45,7 +44,7 @@ function listenForClicks() {
      * Get the active tab,
      * then call "crack()" or "reset()" as appropriate.
      */
-    if (e.target.classList.contains("crack")) {
+    if (e.target.classList.contains("cracker")) {
       browser.tabs.query({active: true, currentWindow: true})
         .then(crack_it)
         .catch(reportError);
@@ -55,7 +54,6 @@ function listenForClicks() {
         .then(reset)
         .catch(reportError);
     }
-  });
 }
 
 /**
