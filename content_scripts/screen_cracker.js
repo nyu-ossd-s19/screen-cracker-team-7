@@ -19,6 +19,7 @@
     let crackImage = document.createElement("img");
     crackImage.setAttribute("src", crackURL);
     crackImage.style.height = "100vh";
+    crackImage.style.width = "100vw";
     crackImage.className = "crack-image";
     document.body.appendChild(crackImage);
   }

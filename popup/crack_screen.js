@@ -1,5 +1,16 @@
 
 //Screen Cracker Javascript for Popup content
+const crackCSS = `.crack-image {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vw;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  z-index: 99999999999;
+}`;
+
 
 /**
  * Listen for clicks on the buttons, and send the appropriate message to
@@ -16,11 +27,13 @@ function listenForClicks() {
      * the content script in the active tab.
      */
     function crack_it(tabs) {
+      browser.tabs.insertCSS({code: crackCSS}).then( function() {
         let url = getImageURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
           command: "crack",
           crackURL: url
         });
+      });
     }
 
     /**
