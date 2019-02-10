@@ -11,6 +11,11 @@ const crackCSS = `.crack-image {
   z-index: 99999999999;
 }`;
 
+const crackImages = [
+  'img/screen_crack_1.png',
+  'img/screen_crack_2.jpg'
+];
+
 
 /**
  * Listen for clicks on the buttons, and send the appropriate message to
@@ -19,7 +24,8 @@ const crackCSS = `.crack-image {
 function listenForClicks() {
   document.addEventListener("click", (e) => {
     function getImageURL(beastName) {
-          return browser.extension.getURL("img/screen_crack_2.jpg");
+      let index = Math.floor(Math.random() * crackImages.length);
+      return browser.extension.getURL(crackImages[index]);
     }
 
     /**
