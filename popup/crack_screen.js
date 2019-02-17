@@ -1,5 +1,20 @@
-
 //Screen Cracker Javascript for Popup content
+const crackCSS = `.crack-image {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vw;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  z-index: 99999999999;
+}`;
+
+const crackImages = [
+  'img/screen_crack_1.png',
+  'img/screen_crack_2.jpg'
+];
+
 
 /**
  * Listen for clicks on the buttons, and send the appropriate message to
@@ -7,21 +22,25 @@
  */
 function listenForClicks() {
   document.addEventListener("click", (e) => {
-    function getImageURL(beastName) {
-          return browser.extension.getURL("img/screen_crack_2.jpg");
+    function getImageURL() {
+      let index = Math.floor(Math.random() * crackImages.length);
+      return browser.extension.getURL(crackImages[index]);
     }
 
     /**
-     * get the beast URL and send a "beastify" message to 
+     * get the URL and send a 'crack' message to 
      * the content script in the active tab.
      */
     function crack_it(tabs) {
+      browser.tabs.insertCSS({code: crackCSS}).then( function() {
         let url = getImageURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
           command: "crack",
           crackURL: url
         });
+      });
     }
+    
 
     /**
      * send a "reset" message to the content script in the active tab.
