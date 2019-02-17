@@ -1,4 +1,3 @@
-
 //Screen Cracker Javascript for Popup content
 const crackCSS = `.crack-image {
   position: fixed;
@@ -23,13 +22,13 @@ const crackImages = [
  */
 function listenForClicks() {
   document.addEventListener("click", (e) => {
-    function getImageURL(beastName) {
+    function getImageURL() {
       let index = Math.floor(Math.random() * crackImages.length);
       return browser.extension.getURL(crackImages[index]);
     }
 
     /**
-     * get the beast URL and send a "beastify" message to 
+     * get the URL and send a 'crack' message to 
      * the content script in the active tab.
      */
     function crack_it(tabs) {
@@ -41,6 +40,7 @@ function listenForClicks() {
         });
       });
     }
+    
 
     /**
      * send a "reset" message to the content script in the active tab.
